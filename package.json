@@ -1,0 +1,17 @@
+{
+  "name": "base45-encoder",
+  "version": "0.1.0",
+  "description": "Encodes and decodes Base45 as specified in RFC 9285 for compact QR code payloads.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
