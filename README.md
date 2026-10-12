@@ -26,3 +26,10 @@ Base45 is designed for QR codes: it packs more data per symbol than Base64 while
 - `encode(bytes: Uint8Array): string`
 - `decode(str: string): Uint8Array`
 - `ALPHABET: string` — the 45-character alphabet in RFC order.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
